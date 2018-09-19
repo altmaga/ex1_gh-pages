@@ -1,0 +1,526 @@
+/* -------------- LES INDISPENSABLES ---------------- */
+
+@charset"UTF-8";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* clearfix */
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* navigations */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.no_text {
+    font-size: 0;
+    margin: 0;
+}
+
+.retour{
+    display: block;
+}
+
+.bold{
+    font-weight: 400;
+}
+
+.bold2{
+    font-weight: 700;
+}
+
+/* -------------- LES INDISPENSABLES ---------------- */
+
+/* ================================================== */
+
+/* ----- POLICES ET TEXTES ------*/
+
+html {
+    font-size: 75%/* 1rem > 12px */
+}
+
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+}
+
+h2, h3, h4{
+    font-family: 'Kiona', 'Arial', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+h2{
+    font-size: 3em;
+    
+}
+
+h3{
+    font-size: 5em;
+    margin-top: 10px;
+}
+
+h4{
+    font-size: 1.5em;
+}
+
+h5{
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+h6{
+    font-size: 4em;
+    font-weight: 400;
+    margin-bottom: 90px;
+    margin-left: 80px;
+}
+
+h5, h6{
+    font-family: 'Kiona', 'Arial', sans-serif;
+    text-transform: uppercase;
+        margin-top: 0;
+}
+
+p{
+    font-weight: 100;
+    font-size: 1.2em;
+    line-height: 20px;
+    text-align: left;
+}
+
+
+
+/* ========= HEADER ========= */
+
+/* ---- topbar ----- */
+
+header{
+    background: transparent url(../images/visuel_header.png) no-repeat left;
+    background-size: cover;
+    height: 640px;
+}
+
+#logo{
+    padding-top: 30px;
+}
+
+/* navigations */
+
+#social_nav ul {
+    justify-content: space-between;
+    text-decoration: none;
+    width: 140px;
+    margin-top: 20px;
+}
+
+#social_nav a {
+    display: block;
+    height: 60px;
+}
+
+#social_nav a#fb {
+    background: transparent url(../images/fb.png) no-repeat center;
+
+}
+
+#social_nav a#insta {
+    background: transparent url(../images/insta.png) no-repeat center;
+}
+
+#social_nav a#fb:visited,
+#social_nav a#fb:hover,
+#social_nav a#fb:focus {
+    background: transparent url(../images/fb_hover.png) no-repeat center;
+    transition: all .5sec;
+}
+
+#social_nav a#insta:visited,
+#social_nav a#insta:hover,
+#social_nav a#insta:focus {
+    background: transparent url(../images/insta_hover.png) no-repeat center;
+    transition: all .5sec;
+}
+
+/* textes */
+
+#txt{
+    margin-left: 80px;
+}
+
+#txt h2{
+    margin-left: 120px;
+}
+
+#txt p{
+    color: #fff;
+    margin-left: 20px;
+}
+
+/* visuel */
+
+#header_title{
+    justify-content: space-between;
+    margin-top: 90px;
+}
+
+#meteo{
+    background: rgba(97, 192, 191, .3) no-repeat right;
+    height: 250px;
+}
+
+#meteo p{
+    text-align: center;
+}
+
+#soleil{
+    background: transparent url(../images/soleil.png) no-repeat center;
+    height: 60px;
+    width: 60px;
+    margin-left: 120px;
+}
+
+/* ============ MAIN =========== */
+
+/* ---- main 1 - le site ----- */
+
+#spot_content{
+    justify-content: space-between;
+    margin-top: 70px;
+    margin-bottom: 90px;
+}
+
+#spot_visuel{
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+/* visuel */
+
+#visuel1{
+    background: transparent url(../images/main_1-visuel1.png) no-repeat center;
+    height: 270px;
+    width: 270px;
+}
+
+#visuel2{
+    background: transparent url(../images/main_1-visuel2.png) no-repeat center;
+    height: 270px;
+    width: 270px;
+}
+
+#visuel3{
+    background: transparent url(../images/main_1-visuel3.png) no-repeat center;
+    height: 270px;
+    width: 270px;
+}
+
+#visuel4{
+    background: transparent url(../images/main_1-visuel4.png) no-repeat center;
+    height: 270px;
+    width: 270px;
+}
+
+/* txt */
+
+#spot_container p{
+    text-align: left;
+}
+
+/* ---- main 2 - le slider ----- */
+
+@keyframes AutoSlide {
+	0% {
+		left: 0px; /*1ère image*/
+	}
+	15% {
+		left: 0px; /*idem pour attente*/
+	}
+	35% {
+		left: -150px; /*2ème image*/
+	}
+	50% {
+		left: -150px; /*idem pour attente*/
+	}
+	70% {
+		left: -300px; /*3ème image*/
+	}
+	85% {
+		left: -300px; /*idem pour attente*/
+	}
+	100% {
+		left: 0px; /*1ère image*/
+	}
+}
+
+#slideshow {
+	position: relative;
+	width: 1366px;
+	height: 455px;
+	margin:  20px auto;
+	overflow: hidden;
+}
+#sContent li {
+	display: inline;
+}
+
+#sContent {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 450px;
+	margin: 0;            
+	padding: 0;
+	
+	/*CSS3 keyframes animation*/
+	animation-name: AutoSlide;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+/* ---- main 3 - les sessions ----- */
+
+#sessions{
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+
+#sessions_content{
+    justify-content: space-between;
+}
+
+#sessions_visuel{
+    justify-content: space-between;
+}
+
+#sessions_txt{
+    position: relative;
+}
+
+#sessions_txt p{
+    margin-right: 10px;
+}
+
+/* visuel */
+
+#session1{
+    background: transparent url(../images/main_3-visuel1.png) no-repeat center;
+    height: 290px;
+    width: 300px;
+}
+
+#session2{
+    background: transparent url(../images/main_3-visuel2.png) no-repeat center;
+    height: 290px;
+    width: 300px;
+}
+
+#session3{
+    background: transparent url(../images/main_3-visuel3.png) no-repeat center;
+    height: 290px;
+    width: 300px;
+}
+
+/* fond cta */
+/* cta - cours de surf */
+#surf{
+    background: #f38181 no-repeat right;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding-left: 10px;
+    
+    position: absolute;
+    top: 200px;
+}
+
+#surf:hover{
+    background: #000 no-repeat right;
+    color: #f38181;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding-left: 10px;
+    
+    position: absolute;
+    top: 200px;
+}
+
+
+/* cta - surf trip */
+#trip{
+    background: #f38181 no-repeat right;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding-left: 10px;
+    position: absolute;
+    top: 30px;
+    left: 320px;
+}
+
+#blanc{
+    color: #fff;
+    text-transform: lowercase;
+}
+
+/* cta - formule groupe */
+#groupe{
+    background: #f38181 no-repeat right;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding-left: 10px;
+    position: absolute;
+    top: 200px;
+    left: 640px;
+}
+
+#groupe:hover{
+    background: #000 no-repeat right;
+    color: #f38181;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding-left: 10px;
+    
+    position: absolute;
+    top: 200px;
+    left: 640px;
+}
+
+/* cta - en savoir plus */
+
+#more{
+    background: #f38181 no-repeat right;
+    height: 50px;
+    width: 170px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding-left: 10px;
+    position: absolute;
+    top: 220px;
+    left: 450px;
+}
+
+#more:hover{
+    background: #000 no-repeat right;
+    color: #f38181;
+    height: 50px;
+    width: 170px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding-left: 10px;
+    position: absolute;
+    top: 220px;
+    left: 450px;
+}
+
+
+/* ========== FOOTER ========== */
+
+footer{
+    background: #61c0bf no-repeat center;
+}
+
+#footer_container{
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+#footer_container p{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#logo1{
+    background: transparent url(../images/logo_morbihan.png) no-repeat;
+    height: 100px;
+    width: 140px;
+}
+
+#logo2{
+    background: transparent url(../images/logo-bretagne.png) no-repeat;
+    height: 100px;
+    width: 140px;
+}
+
+#logo3{
+    background: transparent url(../images/logo_surf.png) no-repeat;
+    height: 160px;
+    width: 140px;
+}
+
+
+/* ----- BOUTONS ET CALL TO ACTION ----- */
+a{
+    font-family: 'Kiona', 'Arial', sans-serif;
+    font-weight: 100;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* main 3 */
+
+/*  cta - toutes les formules */
+#form{
+    background: #f38181 no-repeat right;
+    text-align: center;
+    font-size: 1.5em;
+    color: #000;
+    margin-top: 100px;
+    height: 70px;
+    padding-top: 15px;
+}
+
+#form:hover{
+    background: #000 no-repeat right;
+    text-align: center;
+    font-size: 1.5em;
+    color: #f38181;
+    margin-top: 100px;
+    height: 70px;
+    padding-top: 15px;
+}
+
+/* cta - plus */
+.plus{
+    background: transparent url(../images/plus.png) no-repeat right;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    /*margin-left: 110px;*/
+}
+
+.plus:hover{
+    background: transparent url(../images/plus_2.png) no-repeat right;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+   /* margin-left: 110px;*/
+}
+
+
